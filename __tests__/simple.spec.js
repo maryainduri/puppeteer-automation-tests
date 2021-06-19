@@ -2,6 +2,7 @@ const puppeteer = require('puppeteer');
 
 let browser;
 let page;
+
 describe('should be able to login', async () => {
 
     before(async () => {
@@ -9,7 +10,6 @@ describe('should be able to login', async () => {
             args: ['--no-sandbox'],
             executablePath: process.env.PUPPETEER_EXEC_PATH, // set by docker container
             headless: false,
-            ...
         });
 
         page = await browser.newPage();
@@ -27,7 +27,7 @@ describe('should be able to login', async () => {
         await page.type('#user-name', 'standard_user')
         await page.type('#password', 'secret_sauce')
         await page.click('#login-button');
-        await page.waitForSelector('#react-burger-menu-btn',{
+        await page.waitForSelector('#react-burger-menu-btn', {
             visible: true
         })
     });
