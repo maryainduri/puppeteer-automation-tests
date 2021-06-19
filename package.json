@@ -1,0 +1,23 @@
+{
+  "name": "puppeteer-automation-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --no-timeout __tests__/simple.spec.js"
+  },
+  "keywords": [
+    "uiautomation",
+    "puppetter"
+  ],
+  "author": {
+    "name": "MaryaManju Induri",
+    "email": "marya.induri@"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^9.0.1",
+    "puppeteer": "^10.0.0",
+    "puppeteer-core": "^10.0.0"
+  }
+}
