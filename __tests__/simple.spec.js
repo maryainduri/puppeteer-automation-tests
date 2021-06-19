@@ -29,6 +29,7 @@ describe('should be able to login', async () => {
         await page.click('#login-button');
         await page.waitForSelector('#react-burger-menu-btn', {
             visible: true
-        })
+        });
+        console.log('User logged InIRL',await page.url())
     });
 });
