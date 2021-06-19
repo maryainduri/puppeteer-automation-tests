@@ -6,8 +6,12 @@ describe('should be able to login', async () => {
 
     before(async () => {
         browser = await puppeteer.launch({
-            headless: false
+            args: ['--no-sandbox'],
+            executablePath: process.env.PUPPETEER_EXEC_PATH, // set by docker container
+            headless: false,
+            ...
         });
+
         page = await browser.newPage();
         await page.goto('https://www.saucedemo.com/', {
             waitUntil: 'networkidle2',
