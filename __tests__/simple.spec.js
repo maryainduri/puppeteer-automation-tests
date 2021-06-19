@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const chalk = require('chalk');
 
 let browser;
 let page;
@@ -26,12 +27,16 @@ describe('should be able to login', async () => {
     it('should be able to login with valid details', async () => {
 
         await page.type('#user-name', 'standard_user')
+        console.log(chalk.green('User enter valid username'))
         await page.type('#password', 'secret_sauce')
+        console.log(chalk.green('User enter valid password'))
         await page.click('#login-button');
+        console.log(chalk.green('User click on login button'))
         await page.waitForSelector('#react-burger-menu-btn', {
             visible: true
         });
         console.log('User logged InIRL',await page.url())
+        console.log(chalk.greenBright('User loggedIn successfully'))
     });
     it('should be able to login with invalid details', async () => {
 
