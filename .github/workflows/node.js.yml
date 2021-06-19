@@ -12,8 +12,7 @@ jobs:
       - name: Install dependencies
         env:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
-        with:
-          args: npm install
+        run: npm install
       - name: Run integration tests ===>>
         uses: mujo-code/puppeteer-headful@master
         env:
