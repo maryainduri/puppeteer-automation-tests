@@ -20,6 +20,5 @@ jobs:
         with:
           args: npm test
       - name: Generate Allure HTML report ===>>
-        with:
-          args: npm run generateHtmlReport
+        run: npm run generateHtmlReport
 
