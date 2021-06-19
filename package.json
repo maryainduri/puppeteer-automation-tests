@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --no-timeout __tests__/simple.spec.js"
+    "test": "./node_modules/.bin/mocha --no-timeout --colors __tests__/simple.spec.js"
   },
   "keywords": [
     "uiautomation",
