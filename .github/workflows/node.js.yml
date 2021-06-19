@@ -12,16 +12,13 @@ jobs:
       - name: Install dependencies
         env:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
-        run: |
-          npm install
+        run: npm install
       - name: Run integration tests ===>>
         uses: mujo-code/puppeteer-headful@master
         env:
           CI: 'true'
-        run: |
-          npm test
+        run: npm test
       - name: Generate Allure HTML report ===>>
         if: always()
-        run: |
-          npm run generateHtmlReport
+        run: npm run generateHtmlReport
 
