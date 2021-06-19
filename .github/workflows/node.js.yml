@@ -19,3 +19,7 @@ jobs:
           CI: 'true'
         with:
           args: npm test
+      - name: Generate Allure HTML report ===>>
+        with:
+          args: npm run generateHtmlReport
+

@@ -1,10 +1,11 @@
 {
   "name": "puppeteer-automation-tests",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "UI Automation test framework using Puppeteer",
+  "main": "",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --no-timeout --colors --full-trace __tests__/simple.spec.js"
+    "test": "./node_modules/.bin/mocha --no-timeout --colors --full-trace --reporter mocha-allure-reporter __tests__/simple.spec.js",
+    "generateHtmlReport": "node __tests__/generateReport.js"
   },
   "keywords": [
     "uiautomation",
@@ -16,8 +17,10 @@
   },
   "license": "ISC",
   "dependencies": {
+    "allure-commandline": "^2.13.8",
     "chalk": "^4.1.1",
     "mocha": "^9.0.1",
+    "mocha-allure-reporter": "^1.4.0",
     "puppeteer": "^10.0.0",
     "puppeteer-core": "^10.0.0"
   }
